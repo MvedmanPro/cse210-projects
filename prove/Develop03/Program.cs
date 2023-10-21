@@ -6,6 +6,8 @@ class Program
     {
         Console.WriteLine("Welcome to the scripture memorization program!\nDo you want to memorize a single verse or multiple verses? (single/multiple)");
         string response = Console.ReadLine().ToLower();
+        Console.WriteLine("_______________");
+        Console.WriteLine(" ");
 
         List<string> verses = new List<string>();
         Reference reference;
@@ -30,8 +32,14 @@ class Program
            while (!scripture.IsCompletelyHidden())
            {
                scripture.Display();
-               Console.WriteLine("Press Enter to hide the next three words...");
-               Console.ReadLine();
+               Console.WriteLine(" ");
+               Console.WriteLine("______________");
+               Console.WriteLine("Press Enter to hide the next three words or type 'quit' to exit");
+               string input = Console.ReadLine();
+               if (input.ToLower() == "quit")
+               {
+                return;
+               }
                scripture.HideNextWords(3);
                Console.Clear();
            }
