@@ -4,7 +4,7 @@ public class Lecture : Event
     private string _speakerName;
     private int _capacity;
 
-    public Lecture(string title, string description, DateTime date, TimeSpan time, Address address, string speaker, int capacity): base(title, description, date, time, address)
+    public Lecture(string title, string description, DateTime date, TimeSpan time, Address address, string speaker, int capacity) : base(title, description, date, time, address)
     {
         this._speakerName = speaker;
         this._capacity = capacity;
